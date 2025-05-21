@@ -1,0 +1,1 @@
+dim_data = CALENDAR(MIN('exec'[COMPETÊNCIA]), MAX('exec'[COMPETÊNCIA]))

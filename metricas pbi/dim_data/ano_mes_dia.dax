@@ -1,0 +1,1 @@
+ano/mes/dia = FORMAT(dim_data[Date], "yyyy/mm/dd")
