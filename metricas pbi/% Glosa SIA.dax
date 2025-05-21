@@ -1,0 +1,9 @@
+% Glosa SIA = 
+VAR Apresentada = SUM(exec[QUANTIDADE APRESENTADA_SIA])
+VAR Aprovada = SUM(exec[QUANTIDADE APROVADA_SIA])
+RETURN 
+IF(
+    Apresentada = 0,
+    0,
+    (Apresentada - Aprovada) / Apresentada
+)

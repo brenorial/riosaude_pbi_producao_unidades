@@ -1,0 +1,1 @@
+ano = YEAR(dim_data[Date])
