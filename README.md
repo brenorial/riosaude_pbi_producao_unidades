@@ -62,7 +62,7 @@ Para garantir que os dados da planilha estejam sempre atualizados e reflitam as 
 
 ## 🗂️ Workflow
 
-![alt text](workflow.png)
+![alt text](public/workflow.png)
 
 ## ✅ Vantagens sobre conectar o Power BI direto pela URL do Google Sheets
 
