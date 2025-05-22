@@ -12,8 +12,5 @@ theme:
 nav:
   - Início: index.md
   - Código: codigo.md
-  - Explicação: explicacao.md
-  - Workflow: workflow.md
-  - Vantagens: vantagens.md
   - Power BI: powerbi.md
   - Conclusão: conclusao.md
