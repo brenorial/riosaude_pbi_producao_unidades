@@ -1,0 +1,6 @@
+% Glosa AIH = 
+DIVIDE(
+    SUM(exec[QUANTIDADE REJEITADA_AIH]),
+    SUM(exec[QUANTIDADE APRESENTADA_AIH]),
+    0
+)
