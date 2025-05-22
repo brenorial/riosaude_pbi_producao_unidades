@@ -84,6 +84,35 @@ DIVIDE(
 
 ---
 
+# 📅 Dimensão Datas – `dim_data`
+
+Essa medida foi criada para gerar uma tabela de datas com base na menor e maior competência disponível na tabela `exec`. A fórmula usada foi:
+
+```DAX
+dim_data = CALENDAR(MIN('exec'[COMPETÊNCIA]), MAX('exec'[COMPETÊNCIA]))
+```
+
+### O que ela faz?
+
+Cria uma tabela chamada `dim_data` contendo todas as datas entre o menor e o maior valor encontrado na coluna `COMPETÊNCIA`. Essa coluna representa os períodos (mensais) das informações analisadas.
+
+### Por que isso é importante?
+
+Ter uma **tabela de datas** completa é essencial para trabalhar com análises temporais no Power BI. Com ela é possível:
+
+- Relacionar a tabela de datas com dados de produção.
+- Criar gráficos com filtros por ano, mês, trimestre etc.
+
+### Próximo passo
+
+Depois de gerar essa tabela, adiciono colunas auxiliares como:
+
+- Ano (`YEAR([Date])`)
+- Mês (`MONTH([Date])`)
+- Nome do Mês (`FORMAT([Date], "MMMM")`)
+- Trimestre (`QUARTER([Date])`)
+- Dia da Semana (`WEEKDAY([Date])`)
+
 # 🔗 Como usar o JSON do Apps Scripts no Power BI
 
 **Publique o script como Web App**:
