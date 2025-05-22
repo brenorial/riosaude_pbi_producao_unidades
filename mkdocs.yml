@@ -1,0 +1,19 @@
+site_name: Integração Google Sheets + Power BI
+theme:
+  name: material
+  palette:
+    scheme: slate # modo escuro (dark)
+    primary: custom
+    accent: teal
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+nav:
+  - Início: index.md
+  - Código: codigo.md
+  - Explicação: explicacao.md
+  - Workflow: workflow.md
+  - Vantagens: vantagens.md
+  - Power BI: powerbi.md
+  - Conclusão: conclusao.md
