@@ -12,7 +12,7 @@
         <link rel="prev" href="..">
       
       
-        <link rel="next" href="../explicacao/">
+        <link rel="next" href="../powerbi/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -256,72 +256,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../explicacao/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Explicação
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../workflow/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Workflow
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../vantagens/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Vantagens
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../powerbi/" class="md-nav__link">
         
   
@@ -419,6 +353,46 @@
   );
 }
 </code></pre>
+<hr />
+<h1 id="explicacao-do-codigo">⚙️ Explicação do Código</h1>
+<ul>
+<li><code>doGet(e)</code>: Função executada em requisições GET.</li>
+<li><code>SpreadsheetApp.openById(...)</code>: Acessa a planilha pelo ID.</li>
+<li><code>getSheetByName("BASE")</code>: Seleciona a aba <code>BASE</code>.</li>
+<li><code>getDataRange().getValues()</code>: Lê todos os dados da aba.</li>
+<li>Transforma os dados em JSON:</li>
+<li>Cabeçalhos da primeira linha.</li>
+<li>Linhas convertidas em objetos JS.</li>
+<li>Colunas a partir da 4ª têm <code>-</code> removidos.</li>
+</ul>
+<hr />
+<h1 id="vantagens-do-metodo">✅ Vantagens do Método</h1>
+<table>
+<thead>
+<tr>
+<th>Conexão Direta (URL)</th>
+<th>Via Apps Script (JSON)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Requer planilha pública (risco de segurança)</td>
+<td>Acesso controlado, mais seguro</td>
+</tr>
+<tr>
+<td>Dados brutos, sem tratamento</td>
+<td>JSON limpo, campos tratados</td>
+</tr>
+<tr>
+<td>Problemas de desempenho</td>
+<td>Mais rápido e estável para grandes volumes</td>
+</tr>
+<tr>
+<td>Pouca flexibilidade</td>
+<td>Lógica personalizada via script</td>
+</tr>
+</tbody>
+</table>
 
 
 

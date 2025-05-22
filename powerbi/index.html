@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../vantagens/">
+        <link rel="prev" href="../codigo/">
       
       
         <link rel="next" href="../conclusao/">
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#como-usar-no-power-bi" class="md-skip">
+        <a href="#metricas-power-bi" class="md-skip">
           Skip to content
         </a>
       
@@ -243,72 +243,6 @@
       
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../explicacao/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Explicação
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../workflow/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Workflow
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../vantagens/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Vantagens
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
     
   
   
@@ -321,6 +255,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Power BI
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -332,6 +279,70 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#aprovados-aih" class="md-nav__link">
+    <span class="md-ellipsis">
+      % Aprovados AIH
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aprovados-sia" class="md-nav__link">
+    <span class="md-ellipsis">
+      % Aprovados SIA
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glosa-aih" class="md-nav__link">
+    <span class="md-ellipsis">
+      % Glosa AIH
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glosa-sia" class="md-nav__link">
+    <span class="md-ellipsis">
+      % Glosa SIA
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#observacoes-gerais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Observações gerais
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -379,6 +390,59 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#aprovados-aih" class="md-nav__link">
+    <span class="md-ellipsis">
+      % Aprovados AIH
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aprovados-sia" class="md-nav__link">
+    <span class="md-ellipsis">
+      % Aprovados SIA
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glosa-aih" class="md-nav__link">
+    <span class="md-ellipsis">
+      % Glosa AIH
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glosa-sia" class="md-nav__link">
+    <span class="md-ellipsis">
+      % Glosa SIA
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#observacoes-gerais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Observações gerais
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -393,7 +457,96 @@
 
 
 
-<h1 id="como-usar-no-power-bi">🔗 Como usar no Power BI</h1>
+<h1 id="metricas-power-bi">📈 Métricas Power BI</h1>
+<h3 id="aprovados-aih">% Aprovados AIH</h3>
+<p>Calcula a porcentagem de autorizações apresentadas no sistema AIH que foram aprovadas, considerando que a quantidade rejeitada é subtraída do total apresentado.</p>
+<pre><code class="language-DAX">% Aprovados AIH =
+DIVIDE(
+    SUM(exec[QUANTIDADE APRESENTADA_AIH]) - SUM(exec[QUANTIDADE REJEITADA_AIH]),
+    SUM(exec[QUANTIDADE APRESENTADA_AIH]),
+    0
+)
+</code></pre>
+<ul>
+<li>Numerador: Quantidade apresentada menos a quantidade rejeitada (autorizadas aprovadas)</li>
+<li>Denominador: Quantidade apresentada</li>
+<li>Retorna 0 em caso de divisão por zero</li>
+</ul>
+<hr />
+<h3 id="aprovados-sia">% Aprovados SIA</h3>
+<p>Calcula a porcentagem de autorizações aprovadas no sistema SIA em relação à quantidade apresentada.</p>
+<pre><code class="language-DAX">% Aprovados SIA =
+DIVIDE(
+    SUM(exec[QUANTIDADE APROVADA_SIA]),
+    SUM(exec[QUANTIDADE APRESENTADA_SIA]),
+    0
+)
+</code></pre>
+<ul>
+<li>Numerador: Quantidade aprovada</li>
+<li>Denominador: Quantidade apresentada</li>
+<li>Retorna 0 em caso de divisão por zero</li>
+</ul>
+<hr />
+<h3 id="glosa-aih">% Glosa AIH</h3>
+<p>Calcula a porcentagem de autorizações rejeitadas (glosas) no sistema AIH em relação à quantidade apresentada.</p>
+<pre><code class="language-DAX">% Glosa AIH =
+DIVIDE(
+    SUM(exec[QUANTIDADE REJEITADA_AIH]),
+    SUM(exec[QUANTIDADE APRESENTADA_AIH]),
+    0
+)
+</code></pre>
+<ul>
+<li>Numerador: Quantidade rejeitada</li>
+<li>Denominador: Quantidade apresentada</li>
+<li>Retorna 0 em caso de divisão por zero</li>
+</ul>
+<hr />
+<h3 id="glosa-sia">% Glosa SIA</h3>
+<p>Calcula a porcentagem de autorizações rejeitadas (glosas) no sistema SIA em relação à quantidade apresentada.</p>
+<pre><code class="language-DAX">% Glosa SIA =
+DIVIDE(
+    SUM(exec[QUANTIDADE APRESENTADA_SIA]) - SUM(exec[QUANTIDADE APROVADA_SIA]),
+    SUM(exec[QUANTIDADE APRESENTADA_SIA]),
+    0
+)
+</code></pre>
+<ul>
+<li>Numerador: Quantidade apresentada menos quantidade aprovada (quantidade rejeitada)</li>
+<li>Denominador: Quantidade apresentada</li>
+<li>Retorna 0 em caso de divisão por zero</li>
+</ul>
+<hr />
+<h2 id="observacoes-gerais">Observações gerais</h2>
+<ul>
+<li>As medidas usam a função <code>DIVIDE</code> para evitar erros de divisão por zero, retornando 0 nesses casos.</li>
+<li>Os dados são provenientes da tabela <code>exec</code> com colunas específicas para cada sistema (AIH e SIA).</li>
+<li>Essas métricas são importantes para análise de eficiência e controle de rejeições nos processos de autorização.</li>
+</ul>
+<hr />
+<h1 id="dimensao-datas-dim_data">📅 Dimensão Datas – <code>dim_data</code></h1>
+<p>Essa medida foi criada para gerar uma tabela de datas com base na menor e maior competência disponível na tabela <code>exec</code>. A fórmula usada foi:</p>
+<pre><code class="language-DAX">dim_data = CALENDAR(MIN('exec'[COMPETÊNCIA]), MAX('exec'[COMPETÊNCIA]))
+</code></pre>
+<h3 id="o-que-ela-faz">O que ela faz?</h3>
+<p>Cria uma tabela chamada <code>dim_data</code> contendo todas as datas entre o menor e o maior valor encontrado na coluna <code>COMPETÊNCIA</code>. Essa coluna representa os períodos (mensais) das informações analisadas.</p>
+<h3 id="por-que-isso-e-importante">Por que isso é importante?</h3>
+<p>Ter uma <strong>tabela de datas</strong> completa é essencial para trabalhar com análises temporais no Power BI. Com ela é possível:</p>
+<ul>
+<li>Relacionar a tabela de datas com dados de produção.</li>
+<li>Criar gráficos com filtros por ano, mês, trimestre etc.</li>
+</ul>
+<h3 id="proximo-passo">Próximo passo</h3>
+<p>Depois de gerar essa tabela, adiciono colunas auxiliares como:</p>
+<ul>
+<li>Ano (<code>YEAR([Date])</code>)</li>
+<li>Mês (<code>MONTH([Date])</code>)</li>
+<li>Nome do Mês (<code>FORMAT([Date], "MMMM")</code>)</li>
+<li>Trimestre (<code>QUARTER([Date])</code>)</li>
+<li>Dia da Semana (<code>WEEKDAY([Date])</code>)</li>
+</ul>
+<h1 id="como-usar-o-json-do-apps-scripts-no-power-bi">🔗 Como usar o JSON do Apps Scripts no Power BI</h1>
 <p><strong>Publique o script como Web App</strong>:</p>
 <ul>
 <li>Vá em <strong>Publicar</strong> &gt; <strong>Implantar como aplicativo da Web</strong></li>
