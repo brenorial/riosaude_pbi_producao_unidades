@@ -96,3 +96,15 @@ Para garantir que os dados da planilha estejam sempre atualizados e reflitam as 
 ## 📌 Conclusão
 
 Utilizar o Google Apps Script como intermediário entre o Google Sheets e o Power BI oferece **mais controle, segurança e performance**. Esse método permite também realizar transformações de dados antes mesmo que eles sejam carregados no Power BI.
+
+# 📚 Documentação do Projeto RioSaúde PBI
+
+A documentação completa deste projeto está disponível online e pode ser acessada através do link abaixo:
+
+👉 [Acesse a documentação aqui](https://brenorial.github.io/riosaude_pbi_producao_unidades/)
+
+---
+
+Até a próxima! 🚀
+
+
