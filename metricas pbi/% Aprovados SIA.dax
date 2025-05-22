@@ -1,0 +1,6 @@
+% Aprovados SIA = 
+DIVIDE(
+    SUM(exec[QUANTIDADE APROVADA_SIA]),
+    SUM(exec[QUANTIDADE APRESENTADA_SIA]),
+    0
+)
