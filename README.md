@@ -2,6 +2,16 @@
 
 Este repositório contém um script do Google Apps Script que expõe os dados de uma planilha do Google Sheets em formato **JSON**, permitindo a integração eficiente e estruturada com ferramentas de BI como o **Power BI**.
 
+---
+
+# 📚 Documentação do Projeto RioSaúde PBI
+
+A documentação completa deste projeto está disponível online e pode ser acessada através do link abaixo:
+
+👉 [Acesse a documentação aqui](https://brenorial.github.io/riosaude_pbi_producao_unidades/)
+
+---
+
 ## 📌 Objetivo
 
 Facilitar a extração de dados de uma aba específica (`BASE`) da planilha, estruturando-os como JSON por meio de uma **API personalizada (endpoint do Google Apps Script)**. Isso torna o processo mais seguro, estável e performático do que utilizar a conexão direta via URL pública do Google Sheets.
@@ -96,12 +106,6 @@ Para garantir que os dados da planilha estejam sempre atualizados e reflitam as 
 ## 📌 Conclusão
 
 Utilizar o Google Apps Script como intermediário entre o Google Sheets e o Power BI oferece **mais controle, segurança e performance**. Esse método permite também realizar transformações de dados antes mesmo que eles sejam carregados no Power BI.
-
-# 📚 Documentação do Projeto RioSaúde PBI
-
-A documentação completa deste projeto está disponível online e pode ser acessada através do link abaixo:
-
-👉 [Acesse a documentação aqui](https://brenorial.github.io/riosaude_pbi_producao_unidades/)
 
 ---
 
