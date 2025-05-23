@@ -112,6 +112,7 @@ Depois de gerar essa tabela, adiciono colunas auxiliares como:
 - Nome do Mês (`FORMAT([Date], "MMMM")`)
 - Trimestre (`QUARTER([Date])`)
 - Dia da Semana (`WEEKDAY([Date])`)
+- Mês Abreviado (`SWITCH(MONTH(dim_data[Date]),1, "jan", 2, "fev", ...`)
 
 # 🔗 Como usar o JSON do Apps Scripts no Power BI
 
