@@ -2,7 +2,7 @@ site_name: Integração Google Sheets + Power BI
 theme:
   name: material
   palette:
-    scheme: slate # modo escuro (dark)
+    scheme: slate 
     primary: custom
     accent: teal
   font:
