@@ -23,7 +23,7 @@ Facilitar a extração de dados de uma aba específica (`BASE`) da planilha, est
 ```javascript
 function doGet(e) {
   var ss = SpreadsheetApp.openById(
-    "1ylLkwJIlyt0iNyvkWrR2jegwis266XHcJccuTYcChCE"
+    ""
   );
   var sheet = ss.getSheetByName("BASE");
   var data = sheet.getDataRange().getValues();

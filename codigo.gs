@@ -1,5 +1,5 @@
 function doGet(e) {
-  var ss = SpreadsheetApp.openById('1ylLkwJIlyt0iNyvkWrR2jegwis266XHcJccuTYcChCE');
+  var ss = SpreadsheetApp.openById('');
   var sheet = ss.getSheetByName('BASE'); 
   var data = sheet.getDataRange().getValues();
   
