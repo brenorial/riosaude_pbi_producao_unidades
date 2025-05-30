@@ -8,7 +8,7 @@ Este repositório contém um script do Google Apps Script que expõe os dados de
 
 A documentação completa deste projeto está disponível online e pode ser acessada através do link abaixo:
 
-👉 [Acesse a documentação aqui]([https://brenorial.github.io/riosaude_pbi_producao_unidades/](https://brenorial.github.io/riosaude_pbi_producao_unidades/))
+👉 [Acesse a documentação aqui](https://brenorial.github.io/riosaude_pbi_producao_unidades/)
 
 ---
 
