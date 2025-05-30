@@ -101,4 +101,4 @@ function padronizarNomes() {
 
   outputRange.setValues(resultados.map(r => [r]));
 }
-````
+```
