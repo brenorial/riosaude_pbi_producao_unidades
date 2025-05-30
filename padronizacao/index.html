@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../padronizacao/">
+        <link rel="prev" href="../codigo/">
       
       
-        <link rel="next" href="../power_query/">
+        <link rel="next" href="../powerbi/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Power BI - Integração Google Sheets + Power BI</title>
+        <title>Padronização - Integração Google Sheets + Power BI</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#metricas-power-bi" class="md-skip">
+        <a href="#padronizacao-de-nomes-na-planilha-google-sheets" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Power BI
+              Padronização
             
           </span>
         </div>
@@ -243,28 +243,6 @@
       
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../padronizacao/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Padronização
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
     
   
   
@@ -282,7 +260,7 @@
   
   
   <span class="md-ellipsis">
-    Power BI
+    Padronização
     
   </span>
   
@@ -295,7 +273,7 @@
   
   
   <span class="md-ellipsis">
-    Power BI
+    Padronização
     
   </span>
   
@@ -318,45 +296,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#aprovados-aih" class="md-nav__link">
+  <a href="#como-funciona" class="md-nav__link">
     <span class="md-ellipsis">
-      % Aprovados AIH
+      Como funciona
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#aprovados-sia" class="md-nav__link">
+  <a href="#codigo-do-script" class="md-nav__link">
     <span class="md-ellipsis">
-      % Aprovados SIA
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#glosa-aih" class="md-nav__link">
-    <span class="md-ellipsis">
-      % Glosa AIH
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#glosa-sia" class="md-nav__link">
-    <span class="md-ellipsis">
-      % Glosa SIA
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#observacoes-gerais" class="md-nav__link">
-    <span class="md-ellipsis">
-      Observações gerais
+      Código do Script
     </span>
   </a>
   
@@ -366,6 +317,28 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../powerbi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Power BI
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -441,45 +414,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#aprovados-aih" class="md-nav__link">
+  <a href="#como-funciona" class="md-nav__link">
     <span class="md-ellipsis">
-      % Aprovados AIH
+      Como funciona
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#aprovados-sia" class="md-nav__link">
+  <a href="#codigo-do-script" class="md-nav__link">
     <span class="md-ellipsis">
-      % Aprovados SIA
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#glosa-aih" class="md-nav__link">
-    <span class="md-ellipsis">
-      % Glosa AIH
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#glosa-sia" class="md-nav__link">
-    <span class="md-ellipsis">
-      % Glosa SIA
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#observacoes-gerais" class="md-nav__link">
-    <span class="md-ellipsis">
-      Observações gerais
+      Código do Script
     </span>
   </a>
   
@@ -501,116 +447,105 @@
 
 
 
-<h1 id="metricas-power-bi">📈 Métricas Power BI</h1>
-<h3 id="aprovados-aih">% Aprovados AIH</h3>
-<p>Calcula a porcentagem de autorizações apresentadas no sistema AIH que foram aprovadas, considerando que a quantidade rejeitada é subtraída do total apresentado.</p>
-<pre><code class="language-DAX">% Aprovados AIH =
-DIVIDE(
-    SUM(exec[QUANTIDADE APRESENTADA_AIH]) - SUM(exec[QUANTIDADE REJEITADA_AIH]),
-    SUM(exec[QUANTIDADE APRESENTADA_AIH]),
-    0
-)
+<h1 id="padronizacao-de-nomes-na-planilha-google-sheets">🧹 Padronização de Nomes na Planilha Google Sheets</h1>
+<p>Este script em Google Apps Script tem como objetivo padronizar os nomes das unidades hospitalares presentes neste relatório, alinhando-os com a base central de dados. Dessa forma, obtemos maior unificação e consistência das informações, facilitando a análise e a gestão dos dados.</p>
+<h2 id="como-funciona">Como funciona</h2>
+<ol>
+<li><strong>Base de nomes (Coluna A):</strong> Lista de nomes padronizados.</li>
+<li><strong>Nomes a padronizar (Coluna B):</strong> Lista com nomes que podem estar despadronizados.</li>
+<li><strong>Saída (Coluna C):</strong> Nome padronizado correspondente mais próximo encontrado na base.</li>
+<li>O script utiliza:</li>
+<li>Normalização de textos (remoção de acentos, maiúsculas, substituições comuns).</li>
+<li>Algoritmo de distância de Levenshtein para encontrar o nome mais parecido.</li>
+<li>Retorna "NÃO ENCONTRADO" caso a similaridade seja muito baixa.</li>
+</ol>
+<h2 id="codigo-do-script">Código do Script</h2>
+<pre><code class="language-javascript">function padronizarNomes() {
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(&quot;Página5&quot;);
+  const baseRange = sheet.getRange(&quot;A2:A&quot; + sheet.getLastRow());
+  const producaoRange = sheet.getRange(&quot;B2:B&quot; + sheet.getLastRow());
+  const outputRange = sheet.getRange(&quot;C2:C&quot; + sheet.getLastRow());
+
+  const baseValues = baseRange.getValues().flat().filter(String);
+  const producaoValues = producaoRange.getValues().flat();
+
+  function normalizar(nome) {
+    if (!nome) return &quot;&quot;;
+    nome = nome.toString().toUpperCase();
+    nome = nome.normalize('NFD').replace(/[\u0300-\u036f]/g, &quot;&quot;);
+    nome = nome.replace(/HOSP MUN/g, &quot;HOSPITAL MUNICIPAL&quot;)
+               .replace(/H MUN/g, &quot;HOSPITAL MUNICIPAL&quot;)
+               .replace(/MATERN/g, &quot;MATERNIDADE&quot;)
+               .replace(/UPA 24H/g, &quot;UPA&quot;)
+               .replace(/CER - /g, &quot;CER &quot;)
+               .replace(/N S/g, &quot;NOSSA SENHORA&quot;)
+               .replace(/ AP/g, &quot;&quot;)
+               .replace(/-/g, &quot;&quot;)
+               .replace(/SMS /g, &quot;&quot;)
+               .replace(/S TELLES/g, &quot;SILVA TELLES&quot;)
+               .replace(/ B DE /g, &quot; BUARQUE DE &quot;);
+    return nome.trim();
+  }
+
+  function levenshtein(a, b) {
+    if (a.length === 0) return b.length;
+    if (b.length === 0) return a.length;
+
+    const matrix = [];
+
+    for (let i = 0; i &lt;= b.length; i++) {
+      matrix[i] = [i];
+    }
+    for (let j = 0; j &lt;= a.length; j++) {
+      matrix[0][j] = j;
+    }
+
+    for (let i = 1; i &lt;= b.length; i++) {
+      for (let j = 1; j &lt;= a.length; j++) {
+        if (b.charAt(i - 1) === a.charAt(j - 1)) {
+          matrix[i][j] = matrix[i - 1][j - 1];
+        } else {
+          matrix[i][j] = Math.min(
+            matrix[i - 1][j - 1] + 1,
+            matrix[i][j - 1] + 1,
+            matrix[i - 1][j] + 1
+          );
+        }
+      }
+    }
+
+    return matrix[b.length][a.length];
+  }
+
+  const baseNormalizada = baseValues.map(normalizar);
+
+  function encontrarCorrespondente(nome) {
+    const nomeNorm = normalizar(nome);
+    if (!nomeNorm) return &quot;NÃO ENCONTRADO&quot;;
+
+    let melhorIndice = -1;
+    let melhorDistancia = Infinity;
+
+    for (let i = 0; i &lt; baseNormalizada.length; i++) {
+      const dist = levenshtein(nomeNorm, baseNormalizada[i]);
+      if (dist &lt; melhorDistancia) {
+        melhorDistancia = dist;
+        melhorIndice = i;
+      }
+    }
+
+    if (melhorDistancia &lt;= 8) {
+      return baseValues[melhorIndice];
+    } else {
+      return &quot;NÃO ENCONTRADO&quot;;
+    }
+  }
+
+  const resultados = producaoValues.map(encontrarCorrespondente);
+
+  outputRange.setValues(resultados.map(r =&gt; [r]));
+}
 </code></pre>
-<ul>
-<li>Numerador: Quantidade apresentada menos a quantidade rejeitada (autorizadas aprovadas)</li>
-<li>Denominador: Quantidade apresentada</li>
-<li>Retorna 0 em caso de divisão por zero</li>
-</ul>
-<hr />
-<h3 id="aprovados-sia">% Aprovados SIA</h3>
-<p>Calcula a porcentagem de autorizações aprovadas no sistema SIA em relação à quantidade apresentada.</p>
-<pre><code class="language-DAX">% Aprovados SIA =
-DIVIDE(
-    SUM(exec[QUANTIDADE APROVADA_SIA]),
-    SUM(exec[QUANTIDADE APRESENTADA_SIA]),
-    0
-)
-</code></pre>
-<ul>
-<li>Numerador: Quantidade aprovada</li>
-<li>Denominador: Quantidade apresentada</li>
-<li>Retorna 0 em caso de divisão por zero</li>
-</ul>
-<hr />
-<h3 id="glosa-aih">% Glosa AIH</h3>
-<p>Calcula a porcentagem de autorizações rejeitadas (glosas) no sistema AIH em relação à quantidade apresentada.</p>
-<pre><code class="language-DAX">% Glosa AIH =
-DIVIDE(
-    SUM(exec[QUANTIDADE REJEITADA_AIH]),
-    SUM(exec[QUANTIDADE APRESENTADA_AIH]),
-    0
-)
-</code></pre>
-<ul>
-<li>Numerador: Quantidade rejeitada</li>
-<li>Denominador: Quantidade apresentada</li>
-<li>Retorna 0 em caso de divisão por zero</li>
-</ul>
-<hr />
-<h3 id="glosa-sia">% Glosa SIA</h3>
-<p>Calcula a porcentagem de autorizações rejeitadas (glosas) no sistema SIA em relação à quantidade apresentada.</p>
-<pre><code class="language-DAX">% Glosa SIA =
-DIVIDE(
-    SUM(exec[QUANTIDADE APRESENTADA_SIA]) - SUM(exec[QUANTIDADE APROVADA_SIA]),
-    SUM(exec[QUANTIDADE APRESENTADA_SIA]),
-    0
-)
-</code></pre>
-<ul>
-<li>Numerador: Quantidade apresentada menos quantidade aprovada (quantidade rejeitada)</li>
-<li>Denominador: Quantidade apresentada</li>
-<li>Retorna 0 em caso de divisão por zero</li>
-</ul>
-<hr />
-<h2 id="observacoes-gerais">Observações gerais</h2>
-<ul>
-<li>As medidas usam a função <code>DIVIDE</code> para evitar erros de divisão por zero, retornando 0 nesses casos.</li>
-<li>Os dados são provenientes da tabela <code>exec</code> com colunas específicas para cada sistema (AIH e SIA).</li>
-<li>Essas métricas são importantes para análise de eficiência e controle de rejeições nos processos de autorização.</li>
-</ul>
-<hr />
-<h1 id="dimensao-datas-dim_data">📅 Dimensão Datas – <code>dim_data</code></h1>
-<p>Essa medida foi criada para gerar uma tabela de datas com base na menor e maior competência disponível na tabela <code>exec</code>. A fórmula usada foi:</p>
-<pre><code class="language-DAX">dim_data = CALENDAR(MIN('exec'[COMPETÊNCIA]), MAX('exec'[COMPETÊNCIA]))
-</code></pre>
-<h3 id="o-que-ela-faz">O que ela faz?</h3>
-<p>Cria uma tabela chamada <code>dim_data</code> contendo todas as datas entre o menor e o maior valor encontrado na coluna <code>COMPETÊNCIA</code>. Essa coluna representa os períodos (mensais) das informações analisadas.</p>
-<h3 id="por-que-isso-e-importante">Por que isso é importante?</h3>
-<p>Ter uma <strong>tabela de datas</strong> completa é essencial para trabalhar com análises temporais no Power BI. Com ela é possível:</p>
-<ul>
-<li>Relacionar a tabela de datas com dados de produção.</li>
-<li>Criar gráficos com filtros por ano, mês, trimestre etc.</li>
-</ul>
-<h3 id="proximo-passo">Próximo passo</h3>
-<p>Depois de gerar essa tabela, adiciono colunas auxiliares como:</p>
-<ul>
-<li>Ano (<code>YEAR([Date])</code>)</li>
-<li>Mês (<code>MONTH([Date])</code>)</li>
-<li>Nome do Mês (<code>FORMAT([Date], "MMMM")</code>)</li>
-<li>Trimestre (<code>QUARTER([Date])</code>)</li>
-<li>Dia da Semana (<code>WEEKDAY([Date])</code>)</li>
-<li>Mês Abreviado (<code>SWITCH(MONTH(dim_data[Date]),1, "jan", 2, "fev", ...</code>)</li>
-</ul>
-<h1 id="como-usar-o-json-do-apps-scripts-no-power-bi">🔗 Como usar o JSON do Apps Scripts no Power BI</h1>
-<p><strong>Publique o script como Web App</strong>:</p>
-<ul>
-<li>Vá em <strong>Publicar</strong> &gt; <strong>Implantar como aplicativo da Web</strong></li>
-<li>Escolha "Qualquer pessoa" como acesso</li>
-<li>Copie a URL gerada</li>
-</ul>
-<p><strong>No Power BI</strong>:</p>
-<ul>
-<li>Clique em <strong>Obter Dados</strong> &gt; <strong>Web</strong></li>
-<li>Cole a URL do Web App</li>
-<li>Selecione o formato <strong>JSON</strong></li>
-<li>Importe e modele os dados</li>
-</ul>
-<p><strong>Configuração do Power BI</strong></p>
-<ul>
-<li>O arquivo está setado para atualizar todos os dias às 6h da manhã</li>
-<li>Existe o modelo de dados e o arquivo base</li>
-<li>Está separado o arquivo base (criar métricas) e o relatório (consumir dados)</li>
-</ul>
 
 
 

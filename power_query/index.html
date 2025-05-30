@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../padronizacao/">
+        <link rel="prev" href="../powerbi/">
       
       
-        <link rel="next" href="../power_query/">
+        <link rel="next" href="../conclusao/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Power BI - Integração Google Sheets + Power BI</title>
+        <title>Tratamento PBI - Integração Google Sheets + Power BI</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#metricas-power-bi" class="md-skip">
+        <a href="#contexto" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Power BI
+              Tratamento PBI
             
           </span>
         </div>
@@ -265,6 +265,28 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../powerbi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Power BI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -274,15 +296,13 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
   
   <span class="md-ellipsis">
-    Power BI
+    Tratamento PBI
     
   </span>
   
@@ -295,7 +315,7 @@
   
   
   <span class="md-ellipsis">
-    Power BI
+    Tratamento PBI
     
   </span>
   
@@ -308,8 +328,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -318,45 +336,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#aprovados-aih" class="md-nav__link">
+  <a href="#contexto" class="md-nav__link">
     <span class="md-ellipsis">
-      % Aprovados AIH
+      📥 Contexto
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#aprovados-sia" class="md-nav__link">
+  <a href="#passos-realizados" class="md-nav__link">
     <span class="md-ellipsis">
-      % Aprovados SIA
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#glosa-aih" class="md-nav__link">
-    <span class="md-ellipsis">
-      % Glosa AIH
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#glosa-sia" class="md-nav__link">
-    <span class="md-ellipsis">
-      % Glosa SIA
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#observacoes-gerais" class="md-nav__link">
-    <span class="md-ellipsis">
-      Observações gerais
+      Passos realizados
     </span>
   </a>
   
@@ -366,28 +357,6 @@
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../power_query/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Tratamento PBI
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -431,8 +400,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -441,45 +408,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#aprovados-aih" class="md-nav__link">
+  <a href="#contexto" class="md-nav__link">
     <span class="md-ellipsis">
-      % Aprovados AIH
+      📥 Contexto
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#aprovados-sia" class="md-nav__link">
+  <a href="#passos-realizados" class="md-nav__link">
     <span class="md-ellipsis">
-      % Aprovados SIA
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#glosa-aih" class="md-nav__link">
-    <span class="md-ellipsis">
-      % Glosa AIH
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#glosa-sia" class="md-nav__link">
-    <span class="md-ellipsis">
-      % Glosa SIA
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#observacoes-gerais" class="md-nav__link">
-    <span class="md-ellipsis">
-      Observações gerais
+      Passos realizados
     </span>
   </a>
   
@@ -501,116 +441,75 @@
 
 
 
-<h1 id="metricas-power-bi">📈 Métricas Power BI</h1>
-<h3 id="aprovados-aih">% Aprovados AIH</h3>
-<p>Calcula a porcentagem de autorizações apresentadas no sistema AIH que foram aprovadas, considerando que a quantidade rejeitada é subtraída do total apresentado.</p>
-<pre><code class="language-DAX">% Aprovados AIH =
-DIVIDE(
-    SUM(exec[QUANTIDADE APRESENTADA_AIH]) - SUM(exec[QUANTIDADE REJEITADA_AIH]),
-    SUM(exec[QUANTIDADE APRESENTADA_AIH]),
-    0
+  <h1>Tratamento PBI</h1>
+
+<h2 id="contexto">📥 Contexto</h2>
+<p>Após a padronização do JSON, é necessário atualizar o Power BI para reconhecer as novas colunas adicionadas na fonte de dados (API Web via Apps Script).</p>
+<p>Para isso, foi preciso modificar o código Power Query, incluindo explicitamente essas novas colunas no processo de expansão dos dados. Sem essa atualização, as colunas recém-adicionadas não seriam carregadas no Power BI.</p>
+<h2 id="passos-realizados">Passos realizados</h2>
+<ol>
+<li><strong>Atualização da expansão das colunas no Power Query</strong></li>
+</ol>
+<p>No passo onde se expande os registros da coluna <code>"Column1"</code>, foi necessário incluir as novas colunas <code>"UNIDADE_PADRONIZADA"</code> e <code>"SIGLA_UNIDADE"</code>. O código atualizado fica assim:</p>
+<pre><code class="language-m">= Table.ExpandRecordColumn(
+    #&quot;Convertido para Tabela&quot;, &quot;Column1&quot;,
+    {
+      &quot;COMPETÊNCIA&quot;,
+      &quot;CNES&quot;,
+      &quot;UNIDADE&quot;,
+      &quot;VALOR APROVADO_SIA&quot;,
+      &quot;QUANTIDADE APROVADA_SIA&quot;,
+      &quot;QUANTIDADE APRESENTADA_SIA&quot;,
+      &quot;VALOR APRESENTADO_SIA&quot;,
+      &quot;QUANTIDADE APRESENTADA_AIH&quot;,
+      &quot;QUANTIDADE REJEITADA_AIH&quot;,
+      &quot;VALOR TOTAL_AIH&quot;,
+      &quot;UNIDADE_PADRONIZADA&quot;,
+      &quot;SIGLA_UNIDADE&quot;
+    },
+    {
+      &quot;COMPETÊNCIA&quot;,
+      &quot;CNES&quot;,
+      &quot;UNIDADE&quot;,
+      &quot;VALOR APROVADO_SIA&quot;,
+      &quot;QUANTIDADE APROVADA_SIA&quot;,
+      &quot;QUANTIDADE APRESENTADA_SIA&quot;,
+      &quot;VALOR APRESENTADO_SIA&quot;,
+      &quot;QUANTIDADE APRESENTADA_AIH&quot;,
+      &quot;QUANTIDADE REJEITADA_AIH&quot;,
+      &quot;VALOR TOTAL_AIH&quot;,
+      &quot;UNIDADE_PADRONIZADA&quot;,
+      &quot;SIGLA_UNIDADE&quot;
+    }
 )
 </code></pre>
-<ul>
-<li>Numerador: Quantidade apresentada menos a quantidade rejeitada (autorizadas aprovadas)</li>
-<li>Denominador: Quantidade apresentada</li>
-<li>Retorna 0 em caso de divisão por zero</li>
-</ul>
-<hr />
-<h3 id="aprovados-sia">% Aprovados SIA</h3>
-<p>Calcula a porcentagem de autorizações aprovadas no sistema SIA em relação à quantidade apresentada.</p>
-<pre><code class="language-DAX">% Aprovados SIA =
-DIVIDE(
-    SUM(exec[QUANTIDADE APROVADA_SIA]),
-    SUM(exec[QUANTIDADE APRESENTADA_SIA]),
-    0
+<ol>
+<li><strong>Tratamento dos tipos de dados</strong></li>
+</ol>
+<p>Após expandir as colunas, é fundamental ajustar os tipos das colunas para evitar erros e garantir a correta manipulação dos dados. A etapa de transformação de tipos ficou assim:</p>
+<pre><code class="language-m">= Table.TransformColumnTypes(
+    #&quot;Tipo Alterado1&quot;,
+    {
+      {&quot;COMPETÊNCIA&quot;, type datetime},
+      {&quot;CNES&quot;, Int64.Type},
+      {&quot;UNIDADE&quot;, type text},
+      {&quot;VALOR APROVADO_SIA&quot;, type number},
+      {&quot;QUANTIDADE APROVADA_SIA&quot;, Int64.Type},
+      {&quot;QUANTIDADE APRESENTADA_SIA&quot;, Int64.Type},
+      {&quot;VALOR APRESENTADO_SIA&quot;, type number},
+      {&quot;VALOR TOTAL_AIH&quot;, type number},
+      {&quot;UNIDADE_PADRONIZADA&quot;, type text},
+      {&quot;SIGLA_UNIDADE&quot;, type text},
+      {&quot;QUANTIDADE APRESENTADA_AIH&quot;, Int64.Type},
+      {&quot;QUANTIDADE REJEITADA_AIH&quot;, Int64.Type}
+    }
 )
 </code></pre>
-<ul>
-<li>Numerador: Quantidade aprovada</li>
-<li>Denominador: Quantidade apresentada</li>
-<li>Retorna 0 em caso de divisão por zero</li>
-</ul>
+<blockquote>
+<p><strong>Importante:</strong> Se ocorrer erro ao converter as colunas <code>QUANTIDADE APRESENTADA_AIH</code> ou <code>QUANTIDADE REJEITADA_AIH</code> para inteiro, verificar se existem valores vazios ou não numéricos, que precisam ser tratados antes da conversão.</p>
+</blockquote>
 <hr />
-<h3 id="glosa-aih">% Glosa AIH</h3>
-<p>Calcula a porcentagem de autorizações rejeitadas (glosas) no sistema AIH em relação à quantidade apresentada.</p>
-<pre><code class="language-DAX">% Glosa AIH =
-DIVIDE(
-    SUM(exec[QUANTIDADE REJEITADA_AIH]),
-    SUM(exec[QUANTIDADE APRESENTADA_AIH]),
-    0
-)
-</code></pre>
-<ul>
-<li>Numerador: Quantidade rejeitada</li>
-<li>Denominador: Quantidade apresentada</li>
-<li>Retorna 0 em caso de divisão por zero</li>
-</ul>
-<hr />
-<h3 id="glosa-sia">% Glosa SIA</h3>
-<p>Calcula a porcentagem de autorizações rejeitadas (glosas) no sistema SIA em relação à quantidade apresentada.</p>
-<pre><code class="language-DAX">% Glosa SIA =
-DIVIDE(
-    SUM(exec[QUANTIDADE APRESENTADA_SIA]) - SUM(exec[QUANTIDADE APROVADA_SIA]),
-    SUM(exec[QUANTIDADE APRESENTADA_SIA]),
-    0
-)
-</code></pre>
-<ul>
-<li>Numerador: Quantidade apresentada menos quantidade aprovada (quantidade rejeitada)</li>
-<li>Denominador: Quantidade apresentada</li>
-<li>Retorna 0 em caso de divisão por zero</li>
-</ul>
-<hr />
-<h2 id="observacoes-gerais">Observações gerais</h2>
-<ul>
-<li>As medidas usam a função <code>DIVIDE</code> para evitar erros de divisão por zero, retornando 0 nesses casos.</li>
-<li>Os dados são provenientes da tabela <code>exec</code> com colunas específicas para cada sistema (AIH e SIA).</li>
-<li>Essas métricas são importantes para análise de eficiência e controle de rejeições nos processos de autorização.</li>
-</ul>
-<hr />
-<h1 id="dimensao-datas-dim_data">📅 Dimensão Datas – <code>dim_data</code></h1>
-<p>Essa medida foi criada para gerar uma tabela de datas com base na menor e maior competência disponível na tabela <code>exec</code>. A fórmula usada foi:</p>
-<pre><code class="language-DAX">dim_data = CALENDAR(MIN('exec'[COMPETÊNCIA]), MAX('exec'[COMPETÊNCIA]))
-</code></pre>
-<h3 id="o-que-ela-faz">O que ela faz?</h3>
-<p>Cria uma tabela chamada <code>dim_data</code> contendo todas as datas entre o menor e o maior valor encontrado na coluna <code>COMPETÊNCIA</code>. Essa coluna representa os períodos (mensais) das informações analisadas.</p>
-<h3 id="por-que-isso-e-importante">Por que isso é importante?</h3>
-<p>Ter uma <strong>tabela de datas</strong> completa é essencial para trabalhar com análises temporais no Power BI. Com ela é possível:</p>
-<ul>
-<li>Relacionar a tabela de datas com dados de produção.</li>
-<li>Criar gráficos com filtros por ano, mês, trimestre etc.</li>
-</ul>
-<h3 id="proximo-passo">Próximo passo</h3>
-<p>Depois de gerar essa tabela, adiciono colunas auxiliares como:</p>
-<ul>
-<li>Ano (<code>YEAR([Date])</code>)</li>
-<li>Mês (<code>MONTH([Date])</code>)</li>
-<li>Nome do Mês (<code>FORMAT([Date], "MMMM")</code>)</li>
-<li>Trimestre (<code>QUARTER([Date])</code>)</li>
-<li>Dia da Semana (<code>WEEKDAY([Date])</code>)</li>
-<li>Mês Abreviado (<code>SWITCH(MONTH(dim_data[Date]),1, "jan", 2, "fev", ...</code>)</li>
-</ul>
-<h1 id="como-usar-o-json-do-apps-scripts-no-power-bi">🔗 Como usar o JSON do Apps Scripts no Power BI</h1>
-<p><strong>Publique o script como Web App</strong>:</p>
-<ul>
-<li>Vá em <strong>Publicar</strong> &gt; <strong>Implantar como aplicativo da Web</strong></li>
-<li>Escolha "Qualquer pessoa" como acesso</li>
-<li>Copie a URL gerada</li>
-</ul>
-<p><strong>No Power BI</strong>:</p>
-<ul>
-<li>Clique em <strong>Obter Dados</strong> &gt; <strong>Web</strong></li>
-<li>Cole a URL do Web App</li>
-<li>Selecione o formato <strong>JSON</strong></li>
-<li>Importe e modele os dados</li>
-</ul>
-<p><strong>Configuração do Power BI</strong></p>
-<ul>
-<li>O arquivo está setado para atualizar todos os dias às 6h da manhã</li>
-<li>Existe o modelo de dados e o arquivo base</li>
-<li>Está separado o arquivo base (criar métricas) e o relatório (consumir dados)</li>
-</ul>
+<p>Assim, o Power BI reconhecerá as novas colunas e os dados estarão formatados corretamente para análise.</p>
 
 
 
