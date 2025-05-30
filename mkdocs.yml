@@ -1,6 +1,8 @@
 site_name: Integração Google Sheets + Power BI
 theme:
   name: material
+  markdown_extensions:
+    - codehilite
   palette:
     scheme: slate 
     primary: custom
