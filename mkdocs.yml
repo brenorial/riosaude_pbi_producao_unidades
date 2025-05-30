@@ -12,5 +12,7 @@ theme:
 nav:
   - Início: index.md
   - Código: codigo.md
+  - Padronização: padronizacao.md
   - Power BI: powerbi.md
+  - Tratamento PBI: power_query.md
   - Conclusão: conclusao.md
